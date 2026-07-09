@@ -1,3 +1,4 @@
+import 'flashcard_screen.dart';
 import 'package:flutter/material.dart';
 
 class LearnScreen extends StatelessWidget {
@@ -48,7 +49,14 @@ class LearnScreen extends StatelessWidget {
           style: const TextStyle(fontSize: 20),
         ),
         trailing: const Icon(Icons.arrow_forward_ios),
-        onTap: () {},
+        onTap: () {
+  Navigator.push(
+    context,
+    MaterialPageRoute(
+      builder: (_) => const FlashcardScreen(),
+    ),
+  );
+},
       ),
     );
   }
