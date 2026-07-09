@@ -1,3 +1,4 @@
+import 'screens/learn_screen.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -76,11 +77,18 @@ class HomePage extends StatelessWidget {
 
             const SizedBox(height: 40),
 
-            buildButton(
-              Icons.menu_book,
-              "Learn",
-                  () {},
-            ),
+           buildButton(
+  Icons.menu_book,
+  "Learn",
+  () {
+    Navigator.push(
+      context,
+      MaterialPageRoute(
+        builder: (_) => const LearnScreen(),
+      ),
+    );
+  },
+),
 
             buildButton(
               Icons.refresh,
